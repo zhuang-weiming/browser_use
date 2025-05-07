@@ -11,10 +11,11 @@ Python 3.11.11
 ```shell
 (.venv) ➜  browser-use git:(main) ✗ pip install -r requirements.txt
 ```
-    - 主要依赖：
-      - playwright
-      - langchain_google_genai
-      - browser_use
+
+- 主要依赖：
+  - playwright
+  - langchain_google_genai
+  - browser_use
 
 3. 更新prompt/task内容，`python crawl.py` 执行任务。
 
