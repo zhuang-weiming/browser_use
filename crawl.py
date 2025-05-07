@@ -4,9 +4,8 @@ import asyncio # 导入 asyncio
 from dotenv import load_dotenv
 import os # 新增导入
 
-# 使用绝对路径加载 .env 文件
-dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
-load_dotenv(dotenv_path)
+# Read GEMINI_API_KEY into env
+load_dotenv()
 print(f"环境变量: GEMINI_API_KEY={os.getenv('GEMINI_API_KEY')}, GOOGLE_API_KEY={os.getenv('GOOGLE_API_KEY')}")
 
 # 设置多个可能的环境变量名称
@@ -26,7 +25,7 @@ llm = ChatGoogleGenerativeAI(
 
 # Create agent with the model
 agent = Agent(
-    task="Please compare the price of cloud service of AWS and GCP",
+    task="Compare the price of iPhone 15 Pro Max and Samsung Galaxy S23 Ultra",
     llm=llm
 )
 
